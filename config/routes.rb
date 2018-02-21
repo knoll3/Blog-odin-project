@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'follower/new'
-
   root 'static_pages#home'
   get '/about',     to: 'static_pages#about'
   get '/pictures',  to: 'static_pages#pictures'
