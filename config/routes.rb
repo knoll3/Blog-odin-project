@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get '/news', to: 'static_pages#news'
-  get '/about', to: 'static_pages#about'
-  get '/contact', to: 'static_pages#contact'
+  get '/about',     to: 'static_pages#about'
+  get '/pictures',  to: 'static_pages#pictures'
+  get '/videos',    to: 'static_pages#videos'
+  get '/subscribe', to: 'static_pages#subscribe'
 end

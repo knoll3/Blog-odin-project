@@ -6,8 +6,9 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get root_path
     assert_template 'static_pages/home'
     assert_select "a[href=?]", root_path
-    assert_select "a[href=?]", news_path
     assert_select "a[href=?]", about_path, count: 2
-    assert_select "a[href=?]", contact_path
+    assert_select "a[href=?]", pictures_path
+    assert_select "a[href=?]", videos_path
+    assert_select "a[href=?]", subscribe_path
   end
 end

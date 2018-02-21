@@ -8,22 +8,28 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Home | Blog Template"
   end
 
-  test "should get news" do
-    get news_path
-    assert_response :success
-    assert_select "title", "News | Blog Template"
-  end
-
   test "should get about" do
     get about_path
     assert_response :success
     assert_select "title", "About | Blog Template"
   end
 
-  test "should get contact" do
-    get contact_path
+  test "should get pictures" do
+    get pictures_path
     assert_response :success
-    assert_select "title", "Contact | Blog Template"
+    assert_select "title", "Pictures | Blog Template"
   end
+  
+  test "should get videos" do
+    get videos_path
+    assert_response :success
+    assert_select "title", "Videos | Blog Template"
+  end  
+
+  test "should get subscribe" do
+    get subscribe_path
+    assert_response :success
+    assert_select "title", "Subscribe | Blog Template"
+  end  
 
 end
