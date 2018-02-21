@@ -19,4 +19,32 @@ class FollowerTest < ActiveSupport::TestCase
     @follower.email = "     "
     assert_not @follower.valid?
   end
+  
+  test "name should not be too long" do
+    @follower.name = "a" * 51
+    assert_not @follower.valid?
+  end
+  
+  test "email should not be too long" do
+    @follower.email = "a" * 244 + "@example.com"
+    assert_not @follower.valid?
+  end
+  
+  test "email validation should accept valid addresses" do
+    valid_addresses = %w[follower@example.com FOLLOWER@foo.com 
+                         first_last@example.com first+last@foo.com]
+    valid_addresses.each do |valid_address|
+      @follower.email = valid_address
+      assert @follower.valid?, "#{valid_address.inspect} should be valid"
+    end 
+  end 
+  
+  test "email validation should reject invalid addresses" do
+    invalid_addresses = %w[follower@example,com follower_user_name.com 
+                           follower.name@example. foo@bar_baz.com foo@bar+baz.com]
+    invalid_addresses.each do |invalid_address|
+      @follower.email = invalid_address
+      assert_not @follower.valid?, "#{invalid_address.inspect} should be invalid"
+    end 
+  end 
 end
