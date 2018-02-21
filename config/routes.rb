@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/pictures',  to: 'static_pages#pictures'
   get '/videos',    to: 'static_pages#videos'
   get '/subscribe', to: 'followers#subscribe'
+  resources :followers
 end
