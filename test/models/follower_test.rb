@@ -47,4 +47,11 @@ class FollowerTest < ActiveSupport::TestCase
       assert_not @follower.valid?, "#{invalid_address.inspect} should be invalid"
     end 
   end 
+  
+  test "email should be unique" do
+    duplicate_follower = @follower.dup
+    duplicate_follower.email = @follower.email.upcase
+    @follower.save
+    assert_not duplicate_follower.valid?
+  end
 end
