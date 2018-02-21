@@ -54,4 +54,11 @@ class FollowerTest < ActiveSupport::TestCase
     @follower.save
     assert_not duplicate_follower.valid?
   end
+  
+  test "email address should be saved as lower-case" do 
+    mixed_case_email = "FoO@ExAmPlE.CoM"
+    @follower.email = mixed_case_email
+    @follower.save
+    assert_equal mixed_case_email.downcase, @follower.reload.email
+  end 
 end
