@@ -26,10 +26,4 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Videos | Blog Template"
   end  
 
-  test "should get subscribe" do
-    get subscribe_path
-    assert_response :success
-    assert_select "title", "Subscribe | Blog Template"
-  end  
-
 end

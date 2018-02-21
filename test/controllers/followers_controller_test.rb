@@ -2,8 +2,9 @@ require 'test_helper'
 
 class FollowersControllerTest < ActionDispatch::IntegrationTest
   test "should get subscribe" do
-    get followers_subscribe_url
+    get subscribe_path
     assert_response :success
-  end
+    assert_select "title", "Subscribe | Blog Template"
+  end 
 
 end
