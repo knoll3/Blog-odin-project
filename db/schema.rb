@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20180222134941) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
+    t.text "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_posts_on_created_at"
