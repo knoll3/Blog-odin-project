@@ -1,1 +1,4 @@
-# Intentionally left empty
+picard:
+  name: Jean-Luc Picard 
+  email: captain@enterprise.com
+  
