@@ -7,6 +7,7 @@ class FollowersController < ApplicationController
   def create
     @follower = Follower.new(user_params)
     if @follower.save
+      flash[:success] = "You have successfully subscribed."
       redirect_to root_path
     else
       render 'subscribe'
