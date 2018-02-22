@@ -3,7 +3,7 @@ require 'test_helper'
 class PostTest < ActiveSupport::TestCase
   
   def setup
-    @post = Post.new(content: "Lorem ipsum")
+    @post = Post.new(content: "Lorem ipsum is an interesting thing.", title: "Lorem Ipsum")
   end
   
   test "should be valid" do 
@@ -12,6 +12,7 @@ class PostTest < ActiveSupport::TestCase
   
   test "content should be present" do 
     @post.content = "    "
+    @post.title   = "    "
     assert_not @post.valid?
   end
   
