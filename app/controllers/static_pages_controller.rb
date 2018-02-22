@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  
   def home
     @posts = Post.all
   end
@@ -14,4 +15,8 @@ class StaticPagesController < ApplicationController
   
   def subscribe
   end
+  
+  private
+  
+  
 end
