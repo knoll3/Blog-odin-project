@@ -9,7 +9,7 @@ class PostsController < ApplicationController
       flash[:success] = "Successful post."
       redirect_to root_path
     else
-      render 'post'
+      render 'new'
     end
   end
 
