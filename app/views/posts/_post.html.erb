@@ -3,5 +3,6 @@
     <h2><%= post.title %></h2>
     <h5>Posted on <%= correct_date_format(post.created_at) %></h5>
     <p><%= post.content %></p>
+    <%= link_to "delete", post, method: :delete, data: { confirm: "You sure?" } %>
   </div>
 <% end %>
