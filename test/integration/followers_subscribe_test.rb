@@ -8,5 +8,7 @@ class FollowersSubscribeTest < ActionDispatch::IntegrationTest
       post followers_path, params: { follower: { name: "", email: "follower@invalid" } }
     end
     assert_template 'followers/subscribe'
+    assert_select 'div#error_explanation'
+    assert_select 'div.alert'
   end
 end
