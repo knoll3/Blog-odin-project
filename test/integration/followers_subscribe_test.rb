@@ -21,5 +21,6 @@ class FollowersSubscribeTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template 'static_pages/home'
+    assert_not flash.empty?
   end
 end
