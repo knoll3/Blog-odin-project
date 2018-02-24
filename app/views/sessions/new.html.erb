@@ -2,4 +2,12 @@
 <h1>Log in</h1>
 
 <div class="row">
+	<h5>Admin Login</h5>
+	<%= form_for(:session, url: login_path) do |f| %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>	
+
+		<%= f.submit "Log in" %>
+	<% end %>
 </div>
