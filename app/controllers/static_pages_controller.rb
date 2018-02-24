@@ -6,17 +6,10 @@ class StaticPagesController < ApplicationController
   
   def about
   end
-
-  def pictures
-  end
   
   def videos
   end
   
   def subscribe
   end
-  
-  private
-  
-  
 end

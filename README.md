@@ -26,3 +26,4 @@ Things you may want to cover:
 Testing the git on Atom.
 Again testing the git in Atom.
 Another test
+Testing in sublime now
