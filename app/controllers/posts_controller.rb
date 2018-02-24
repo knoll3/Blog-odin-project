@@ -14,9 +14,17 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find_by(id: params[:id])
   end
 
   def update
+    @post = Post.find_by(id: params[:id])
+    if @post.update_attributes(post_params)
+      flash[:success] = "Successful update."
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def destroy
