@@ -3,6 +3,8 @@
   <div class="leftcolumn">
     <h1>Posts</h1>
     <%= link_to "Create Post", new_post_path %>
+    <button id="testButton" onclick="testButton()">Test button</button>
+    <div id="container"></div>
     <%= render 'posts/post' %>
   </div>
 </div>
