@@ -1,10 +1,16 @@
-function testButton() {  
-  var div = document.createElement("div");
-  div.style.width = "100px";
-  div.style.height = "100px";
-  div.style.background = "red";
-  div.style.color = "white";
-  div.innerHTML = "Hello";
+function newPost() {  
+  var title   = document.createElement("input"); 
+  var content = document.createElement("textarea");
 
-  document.getElementById("container").appendChild(div);
+  title.type = "text";
+  title.id = "newTitle";
+  title.value = "Title goes here";
+
+  content.rows = "4";
+  content.cols = "50";
+  content.innerHTML = "This is where the content goes.";
+  content.id = "newContent";
+
+  document.getElementById("newComment").appendChild(title);
+  document.getElementById("newComment").appendChild(content);
 }
