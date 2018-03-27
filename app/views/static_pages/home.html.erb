@@ -1,9 +1,9 @@
 <% provide(:title, "Home") %>
 <div class="row">
-  <div class="leftcolumn">
+  <div class="leftcolumn" id="leftcolumn">
     <h1>Posts</h1>
     <button id="newPost" onclick="newPost()">New Post</button>
-    <div id="newComment"></div>
+    <div id="updatePost"></div>
     <%= render 'posts/post' %>
   </div>
 </div>
